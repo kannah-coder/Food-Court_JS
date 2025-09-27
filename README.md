@@ -1,4 +1,3 @@
-# Food-Court_JS
 # 🍴 Food Court — Interactive Menu & Cart System
 
 A **modern, responsive food ordering web application** built with **HTML, CSS, and Vanilla JavaScript**.
