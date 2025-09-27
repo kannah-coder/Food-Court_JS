@@ -1,0 +1,82 @@
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Food Court — Menu</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">FC</div>
+      <div class="title">
+        <h1>Food Court</h1>
+        <p>Hungry? Browse and add to cart</p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="search" role="search">
+        <input type="search" placeholder="Search dishes or restaurants" aria-label="Search menu" data-js-hook="search-input">
+      </div>
+      <button class="btn" data-js-hook="open-filters">Filters</button>
+      <button class="btn openCart" data-js-hook="open-cart">Cart (<span data-js-hook="cart-count">0</span>)</button>
+    </div>
+  </header>
+
+   
+  <div class="filters" role="toolbar" aria-label="menu filters">
+    <div class="chip active" data-js-hook="filter" data-filter="all">All</div>
+    <div class="chip veg-js" data-js-hook="filter" data-filter="veg">Veg</div>
+    <div class="chip" data-js-hook="filter" data-filter="nonveg">Non-Veg</div>
+    <div class="chip" data-js-hook="filter" data-filter="sides">Sides</div>
+    <div class="chip" data-js-hook="filter" data-filter="drinks">Drinks</div>
+  </div>
+
+   
+    
+  <div class="filters" role="toolbar" aria-label="menu sort">
+    <label for="sort">Sort By:</label>
+    <select id="sort" data-js-hook="sort-select">
+      <option value="default">Default</option>
+      <option value="low-high">Price: Low to High</option>
+      <option value="high-low">Price: High to Low</option>
+      <option value="rating">ratings</option>
+    </select>
+  </div>
+
+  <main>
+    <section>
+      <div class="menu menu-js" data-js-hook="menu-grid" >
+
+        <!-- 10 products -->
+        
+
+
+      </div>
+    </section>
+
+    <aside class="cart">
+      <h2>Your Cart</h2>
+      <div class="cart-body">
+        <div class="empty" data-js-hook="cart-empty">No items yet — add some tasty food!</div>
+        <div class="cart-list" data-js-hook="cart-list" ></div>
+        <div class="total-row" data-js-hook="cart-total" >
+          <div>Total</div>
+          <div><span data-js-hook="cart-total-value">0.00</span></div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <div>Demo menu with 10 products and ratings.</div>
+  </footer>
+
+
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
